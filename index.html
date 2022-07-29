@@ -3,12 +3,7 @@
         <html>
         <body>
         <div id="vis"/>
-         <script src="https://cdn.jsdelivr.net/npm/vega@5.22.0" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8" defer></script>
-        <script defer>
-                console.log('Timeout start');
-        setTimeout(()=> {
+        <script>
         const spec = {
         "encoding" : {
           "x" : {
@@ -770,10 +765,7 @@
     ]
   }
 };
-                
-                console.log('Display data');
                 vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
-        }, 3000)
         
         </script>
         </body>
